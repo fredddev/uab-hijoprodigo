@@ -96,8 +96,10 @@ print("El dinero se acabo")
 print("Su nivel de arrepentimiento esta en :" , jugador.arrepentimiento)      
                 
             
-# -----
-opcion = int(input("Elige una opcion: "))
+try:
+    opcion = int(input("Elige una opción: "))
+except ValueError:
+    print("Por favor ingresa un número válido")
 if opcion == 1:
     jugador.gastar_todo()
 elif opcion == 2:
